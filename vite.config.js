@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  publicDir: 'publish',
+  base: '/company-website/',  // Add this line for GitHub Pages
 }) 
