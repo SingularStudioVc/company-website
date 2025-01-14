@@ -33,11 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let model = null;
 
-  // Load the model
+  // Load the model with the correct base path
   const loader = new GLTFLoader();
+  const modelPath = import.meta.env.BASE_URL + 'bishop.glb';
   
   loader.load(
-    '/bishop.glb',
+    modelPath,
     function (gltf) {
       model = gltf.scene;
       
