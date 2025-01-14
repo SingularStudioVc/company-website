@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', 'SF Mono', SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, monospace;
+  line-height: 1.6;
+  min-width: 320px;
+  color: #ffffff;
+  background-color: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  padding-bottom: 5rem;
+}
+
+h1 {
+  font-size: 6em;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+  font-family: 'JetBrains Mono', 'SF Mono', SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: -0.05em;
+}
+
+header p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-family: 'JetBrains Mono', 'SF Mono', SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, monospace;
+  font-weight: 700;
+}
+
+section {
+  padding: 2rem;
+  margin: 0;
+}
+
+/* Specific styles for about section only */
+section.about {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-left: 0;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Services section specific styles - rename to projects */
+.projects {
+  background-color: #000000;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.projects ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1.5rem;
+}
+
+.project-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-name {
+  font-weight: bold;
+}
+
+/* Contact section specific styles */
+.contact {
+  text-align: left;
+  background-color: #000000;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-intro {
+  margin-bottom: 3rem;
+  opacity: 0.9;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 2rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .contact-form {
+    gap: 1rem;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  section {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 3em;
+  }
+}
+
+/* Responsive design for about section only */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .about-image {
+    order: -1;
+  }
+}
+
+.model-viewer {
+  background-color: #000000;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.model-viewer h2 {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: #ffffff;
+}
+
+#model-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+#model-container canvas {
+  width: 100%;
+  height: 100%;
+}
+
+section.model-viewer {
+  padding: 0;
+  max-width: none;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.logo {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-text {
+  position: relative;
+  z-index: 2;
+}
+
+.logo-slash {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* Add some padding to the top of the header to account for fixed nav */
+header {
+  padding-top: 4rem;
+}
+
+/* Smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+.about-text blockquote {
+  font-style: italic;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 2px solid #ffffff;
+  opacity: 0.8;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.blurred {
+  color: rgba(255, 255, 255, 0.5);
+  filter: blur(4px);
+  user-select: none;
+}

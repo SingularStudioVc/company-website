@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homo SAS</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <script type="module" src="/src/3d-viewer.js"></script>
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="logo">
+        <span class="logo-text">N</span>
+        <span class="logo-slash">-</span>
+      </div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <header>
+      <h1>Homo SAS</h1>
+      <p>Technology company</p>
+    </header>
+
+    <section class="model-viewer">
+      <div id="model-container"></div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About Us</h2>
+          <blockquote>
+            "The one who follows the crowd will usually go no further than the crowd. The one who walks alone is likely to find themselves in places no one has ever been before." - A.E.
+          </blockquote>
+          <p>Here, we love progress, with technology at its core and at the service of humanity. Through iconoclasm, we thrive on challenging the status quo, shaking things up, and creating innovative solutions that help build a better future.</p>
+        </div>
+        <div class="about-image">
+          <img src="/fish.png" alt="Fish swimming against the current" />
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Our Projects</h2>
+      <ul>
+        <li class="project-item">
+          <img src="/logo_y.png" alt="Y Logo" class="project-logo" />
+          <div class="project-info">
+            <span class="project-name">Y</span> - The first european super-app
+          </div>
+        </li>
+        <li class="project-item">
+          <img src="/logo_tabatha.png" alt="Tabatha Logo" class="project-logo" />
+          <div class="project-info">
+            <span class="project-name">Tabatha</span> - Extensive company intelligence for precision investing
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-info">
+            <span class="project-name">Project Goggo</span> - <span class="blurred">Coming hopefully soon</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <form target="_blank" action="https://formsubmit.co/singular.studio.vc@gmail.com" method="POST" class="contact-form">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
+  </body>
+</html>
