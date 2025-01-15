@@ -80,5 +80,34 @@
         <button type="submit" class="submit-btn">Send Message</button>
       </form>
     </section>
+
+    <div class="gdpr-banner">
+      <div class="gdpr-text">
+        This contact form collects your name, email, and message. We are the data controller of this information and will only use it to respond to your inquiry. The form is processed through FormSubmit, who acts as our data processor and only manages the form submission. Your data is transmitted securely via email and will not be used for any other purpose. By submitting the form, you consent to this use.
+      </div>
+      <div class="gdpr-actions">
+        <button class="gdpr-button" onclick="hideBanner()">Dismiss</button>
+      </div>
+    </div>
+
+    <script>
+      const contactForm = document.querySelector('.contact-form');
+      const gdprBanner = document.querySelector('.gdpr-banner');
+      let bannerShown = false;
+
+      // Show banner when user focuses on any form input
+      contactForm.querySelectorAll('input, textarea').forEach(input => {
+        input.addEventListener('focus', function() {
+          if (!bannerShown) {
+            gdprBanner.classList.add('visible');
+            bannerShown = true;
+          }
+        });
+      });
+
+      function hideBanner() {
+        gdprBanner.classList.remove('visible');
+      }
+    </script>
   </body>
 </html>
