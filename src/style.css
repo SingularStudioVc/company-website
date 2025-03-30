@@ -575,3 +575,53 @@ html {
 .dropdown-content::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
 }
+
+/* App Store button styles */
+.appstore-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #6a0dad; /* Purple background */
+  color: white;
+  border: 1px solid #5a0bac; /* Slightly darker purple border */
+  border-radius: 6px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: background 0.3s ease, border-color 0.3s ease; /* Keep base transitions */
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Keep subtle base shadow */
+  position: relative; /* Needed for pseudo-element positioning */
+  overflow: hidden; /* Hide the pseudo-element overflow */
+}
+
+/* Shimmer pseudo-element */
+.appstore-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%; /* Start off-screen */
+  width: 50%; /* Width of the shimmer */
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-25deg); /* Angle the shimmer */
+  transition: left 0.7s; /* Smooth transition on hover out (optional) */
+}
+
+.appstore-btn:hover {
+  background: #7b1ecb; /* Lighter purple on hover */
+  border-color: #6a0dad;
+  /* Remove previous hover effects */
+  /* transform: scale(1.05); */ 
+  /* box-shadow: 0 4px 12px rgba(123, 30, 203, 0.5); */
+}
+
+/* Animate shimmer on hover */
+.appstore-btn:hover::before {
+  left: 150%; /* Move across the button */
+  transition: left 0.7s ease-in-out; /* Define animation timing */
+}
